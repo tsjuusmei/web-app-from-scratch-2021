@@ -1,7 +1,10 @@
-// const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2021-1-31&api_key=i8b5WtpKTdfadlaSh7So7ZZmn7T7q2UfDSaS3ABs'
-const url = 'https://cors-anywhere.herokuapp.com/https://api.mars.spacexcompanion.app/public/v1/sols/'
+const photosUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2021-1-31&api_key=i8b5WtpKTdfadlaSh7So7ZZmn7T7q2UfDSaS3ABs'
+const tempsUrl = 'https://wafs-be.herokuapp.com/temps'
 
 const body = document.querySelector('body')
+
+let averageTemps = []
+let temps = null
 
 function randomPhoto(photos) {
   let img = document.createElement('img')
@@ -13,21 +16,39 @@ function randomPhoto(photos) {
   body.appendChild(img)
 }
 
-function weatherData(uri) {
+function appendTemp(avtemp) {
+  let h1 = document.createElement('h1')
 
-  for (let i = 355; i < 360; i++) {
-    fetch(uri + i.toString())
-      .then(response => response.json())
-      .then(d => console.log(d))
-  }
+  h1.textContent = avtemp
+
+  body.appendChild(h1)
 }
 
-weatherData(url)
 
-// const apiData = fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data)
-//     randomPhoto(data.photos)
-//   }
-//   )
+function averageTemperature(data) {
+  data.forEach(obj => {
+    averageTemps.push(obj.temps.average)
+  });
+
+  for (let i = 0; i < averageTemps.length; i++) {
+    temps += averageTemps[i]
+  }
+
+  const averageTemp = temps / averageTemps.length
+
+  appendTemp(averageTemp.toFixed(2))
+}
+
+
+
+const photoData = fetch(photosUrl)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    randomPhoto(data.photos)
+  }
+  )
+
+const tempData = fetch(tempsUrl)
+  .then(res => res.json())
+  .then(d => averageTemperature(d))
