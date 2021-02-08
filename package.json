@@ -1,0 +1,27 @@
+{
+  "name": "web-app-from-scratch-2021",
+  "version": "1.0.0",
+  "description": "In this course I will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of my choice, manipulated and finally shown in the UI of the App. I will be learning different ways to structure code and develop my own coding style. With the gained knowledge, I will be able to build interactive prototypes, based on real data. Also I will gain a better understanding of how API's, frameworks and libraries work.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsjuusmei/web-app-from-scratch-2021.git"
+  },
+  "keywords": [],
+  "author": "Guus Maij",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsjuusmei/web-app-from-scratch-2021/issues"
+  },
+  "homepage": "https://github.com/tsjuusmei/web-app-from-scratch-2021#readme",
+  "dependencies": {
+    "navigo": "^8.8.6"
+  }
+}
