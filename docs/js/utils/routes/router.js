@@ -1,16 +1,16 @@
 import Navigo from 'navigo'
-import { photoData, tempData } from '../helpers/fetches'
-import { randomPhoto, averageTemperature, appendTemp } from '../helpers/appends'
+import { photoData } from '../helpers/photoData'
+import { tempData } from '../helpers/tempData'
 
-const root = null
-const router = new Navigo(root, false)
+const router = new Navigo('/', false)
 
 export const Router = () => {
   try {
     router
       .on({
         '/': () => {
-          photoData
+          photoData,
+          tempData
         },
         '/sol': () => {
           console.log('sol')
