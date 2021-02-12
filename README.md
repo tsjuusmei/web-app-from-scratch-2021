@@ -2,6 +2,11 @@
 
 In this course I will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of my choice, manipulated and finally shown in the UI of the App. I will be learning different ways to structure code and develop my own coding style. With the gained knowledge, I will be able to build interactive prototypes, based on real data. Also I will gain a better understanding of how API's, frameworks and libraries work.
 
+## Concept
+
+I will create a dashboard in theme of *Mars* (the planet), where you can see the recent pictures of Mars sent by the Mars Rover. Also, the average temperature of Mars will be shown in the dashboard.
+In my project I will be working with a NASA API, specifically the *[Mars Rover Photos](https://api.nasa.gov/#b-a10)* API and also a *[Mars weather API](https://api.mars.spacexcompanion.app/public/)*.
+
 ## Learning goals
 
 * _I can add structure to my code by applying patterns. I can defend the choice for the chosen patterns_
