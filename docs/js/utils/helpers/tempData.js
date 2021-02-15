@@ -1,7 +1,11 @@
 import { averageTemperature } from './appends'
 
-const tempsUrl = 'https://wafs-be.herokuapp.com/temps'
-
-export const tempData = fetch(tempsUrl)
-  .then(res => res.json())
-  .then(d => averageTemperature(d))
+export const tempData = async (endpoint) => {
+  try {
+    const res = await fetch(endpoint)
+    const data = await res.json()
+    return data
+  } catch (err) {
+    throw err
+  }
+}

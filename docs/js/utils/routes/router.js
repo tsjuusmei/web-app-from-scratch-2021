@@ -1,6 +1,7 @@
 import Navigo from 'navigo'
-import { photoData } from '../helpers/photoData'
-import { tempData } from '../helpers/tempData'
+import { homeView } from '../views/home'
+import { detailView } from '../views/detail'
+
 
 const router = new Navigo('/', false)
 
@@ -8,13 +9,8 @@ export const Router = () => {
   try {
     router
       .on({
-        '/': () => {
-          photoData,
-          tempData
-        },
-        '/sol': () => {
-          console.log('sol')
-        },
+        '/': homeView(),
+        '/sol': detailView(),
       })
       .notFound(() => {
         console.error('404...')
