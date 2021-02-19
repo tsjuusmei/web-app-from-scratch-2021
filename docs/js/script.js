@@ -16,6 +16,13 @@ function randomPhoto(photos) {
   body.appendChild(img)
 }
 
+function appendTemp(avtemp) {
+  let h2 = document.createElement('h2')
+
+  h2.textContent(avtemp + '°C')
+
+  body.appendChild(h2)
+}
 
 function averageTemperature(data) {
   data.forEach(obj => {
@@ -28,16 +35,16 @@ function averageTemperature(data) {
 
   const averageTemp = temps / averageTemps.length
   
-  console.log(averageTemp.toFixed(2))
+  appendTemp(averageTemp)
 }
 
 // console.log(temps / averageTemps.length)
 
 const photoData = fetch(photosUrl)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    randomPhoto(data.photos)
+  .then(res => res.json())
+  .then(d => {
+    console.log(d)
+    randomPhoto(d.photos)
   }
   )
 
