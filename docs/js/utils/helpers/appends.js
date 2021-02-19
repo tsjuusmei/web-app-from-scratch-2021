@@ -36,7 +36,7 @@ export function averageTemperature(data) {
 function appendTemp(avtemp) {
   let h2 = document.createElement('h2')
 
-  h2.textContent = "Average temperature: " + avtemp
+  h2.textContent = "Average temperature: " + avtemp + "°C"
 
   body.appendChild(h2)
 }
