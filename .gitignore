@@ -1,4 +1,7 @@
 course
 examples
+node_modules
+dist
+.cache
 
 .env
