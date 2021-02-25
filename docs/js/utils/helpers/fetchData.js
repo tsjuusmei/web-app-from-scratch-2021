@@ -1,6 +1,4 @@
-import { averageTemperature } from './appends'
-
-export const tempData = async (endpoint) => {
+export const fetched = async (endpoint) => {
   try {
     const res = await fetch(endpoint)
     const data = await res.json()

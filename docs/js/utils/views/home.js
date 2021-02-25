@@ -1,10 +1,12 @@
-import { averageTemperature, appendTemp } from '../helpers/appends'
-import { tempData } from '../helpers/tempData'
-import { tempUrl } from '../helpers/endpoints'
+import { averageTemperature, randomPhoto } from '../helpers/appends'
+import { fetched } from '../helpers/fetchData'
+import { tempUrl, photoUrl } from '../helpers/endpoints'
 
 export const homeView = () => {
   return async () => {
-    const data = await tempData(tempUrl)
-    averageTemperature(data)
+    const temperatures = await fetched(tempUrl)
+    const photoData = await fetched(photoUrl)
+    averageTemperature(temperatures)
+    randomPhoto(photoData.photos)
 }
 }
