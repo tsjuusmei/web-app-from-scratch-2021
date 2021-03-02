@@ -1,16 +1,22 @@
 const body = document.querySelector('body')
+const ul = document.querySelector('ul')
 
 let averageTemps = []
 let temps = null
 
-export function randomPhoto(photos) {
+function newLi() {
+  return document.createElement('li')
+}
+
+function randomPhoto(photos) {
   let img = document.createElement('img')
 
   let randomNumber = Math.floor(Math.random() * photos.length)
 
   img.src = photos[randomNumber].img_src
+  img.setAttribute('sol', photos[0].sol)
 
-  body.appendChild(img)
+  return img
 }
 
 export function averageTemperature(data) {
@@ -27,10 +33,40 @@ export function averageTemperature(data) {
   appendTemp(averageTemp.toFixed(2))
 }
 
-export function appendTemp(avtemp) {
-  let h1 = document.createElement('h1')
+function appendTemp(avtemp) {
+  let h2 = document.createElement('h2')
 
-  h1.textContent = avtemp
+  h2.textContent = "Average temperature: " + avtemp + "°C"
 
-  body.appendChild(h1)
+  body.appendChild(h2)
+}
+
+function appendSol(sol) {
+  let p = document.createElement('p')
+
+  p.textContent = "SOL: " + sol
+
+  return p
+}
+
+function appendEdate(Edate) {
+  let p = document.createElement('p')
+
+  p.textContent = "Earth Date: " + Edate
+
+  return p
+}
+
+export function liData(data) {
+  let photo = randomPhoto(data.photos)
+  let sol = appendSol(data.photos[0].sol)
+  let earthdate = appendEdate(data.photos[0].earth_date)
+
+  appendli(photo, sol, earthdate)
+}
+
+export function appendli(photo, sol, earthdate) {
+  let li = newLi()
+  li.append(photo, sol, earthdate)
+  ul.appendChild(li)
 }
