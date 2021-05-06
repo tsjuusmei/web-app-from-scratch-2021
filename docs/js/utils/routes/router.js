@@ -2,15 +2,15 @@ import Navigo from 'navigo'
 import { homeView } from '../views/home'
 import { detailView } from '../views/detail'
 
-
-const router = new Navigo('/', false)
-
 export const Router = () => {
+
+  const router = new Navigo('/', false)
+
   try {
     router
       .on({
         '/': homeView(),
-        '/sol': detailView(),
+        '/sol/:id': detailView(),
       })
       .notFound(() => {
         console.error('404...')

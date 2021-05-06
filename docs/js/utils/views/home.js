@@ -1,33 +1,34 @@
-<<<<<<< HEAD
-import { averageTemperature, randomPhoto } from '../helpers/appends'
-import { fetched } from '../helpers/fetchData'
-import { tempUrl, photoUrl } from '../helpers/endpoints'
-
-export const homeView = () => {
-  return async () => {
-    const temperatures = await fetched(tempUrl)
-    const photoData = await fetched(photoUrl)
-    averageTemperature(temperatures)
-    randomPhoto(photoData.photos)
-}
-=======
 import { averageTemperature, liData } from '../helpers/appends'
 import { fetchData } from '../helpers/fetchData'
-import { tempUrl, photoUrl, sol3035Url, sol3034Url } from '../helpers/endpoints'
+import { tempUrl, solUrl } from '../helpers/endpoints'
 
 export const homeView = () => {
   return async () => {
     const tempData = await fetchData(tempUrl)
     averageTemperature(tempData)
 
-    const sol3035Data = await fetchData(sol3035Url)
-    liData(sol3035Data)
+    const sol3073Url = solUrl("3073")
+    const sol3073Data = await fetchData(sol3073Url)
+    liData(sol3073Data)
 
-    const sol3034Data = await fetchData(sol3034Url)
-    liData(sol3034Data)
+    const sol3072Url = solUrl("3072")
+    const sol3072Data = await fetchData(sol3072Url)
+    liData(sol3072Data)
 
-    const photoData = await fetchData(photoUrl)
-    liData(photoData)
+    const sol3071Url = solUrl("3071")
+    const sol3071Data = await fetchData(sol3071Url)
+    liData(sol3071Data)
+
+    const sol3070Url = solUrl("3070")
+    const sol3070Data = await fetchData(sol3070Url)
+    liData(sol3070Data)
+
+    const sol3069Url = solUrl("3069")
+    const sol3069Data = await fetchData(sol3069Url)
+    liData(sol3069Data)
+
+    const sol3068Url = solUrl("3068")
+    const sol3068Data = await fetchData(sol3068Url)
+    liData(sol3068Data)
   }
->>>>>>> fecd01033acf1a263ec7ef6db5c106b723308a16
 }
