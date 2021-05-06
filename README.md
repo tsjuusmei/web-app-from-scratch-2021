@@ -21,27 +21,6 @@ In my project I will be working with a NASA API, specifically the *[Mars Rover P
 
 ![Interaction Diagram](https://i.imgur.com/bC2O6Fw.png)
 
-## Installation
-
-1. Clone the repository:
-
-```
-  git clone https://github.com/tsjuusmei/web-app-from-scratch-2021.git
-```
-
-2. Install packages
-
-```
-  npm install 
-  // or yarn install
-```
-
-3. Run the app
-
-```
-  npm run dev
-```
-
 ## Datasets
 
 The first dataset I use is the [Mars Rover Photos API](https://api.nasa.gov/#mars-rover-photos). Here is where I get photos and some other information about the context of the photos. Each day there are pictures received on earth, there will be a few hundreds are sent over, which look like this in the dataset: 
@@ -108,6 +87,28 @@ The second dataset is a [self made API](https://wafs-be.herokuapp.com/temps) whi
     }
   }, ...
 ```
+
+## Installation
+
+1. Clone the repository:
+
+```
+  git clone https://github.com/tsjuusmei/web-app-from-scratch-2021.git
+```
+
+2. Install packages
+
+```
+  npm install 
+  // or yarn install
+```
+
+3. Run the app
+
+```
+  npm run dev
+```
+
 
 ## License
 
