@@ -11,11 +11,11 @@ In my project I will be working with a NASA API, specifically the *[Mars Rover P
 
 *Actor diagram*
 
-![Actor Diagram](https://i.imgur.com/xypFfQS.png)
+![Actor Diagram](https://i.imgur.com/wC9OLfP.png)
 
 *Interaction diagram*
 
-![Interaction Diagram](https://i.imgur.com/0lqSuT1.png)
+![Interaction Diagram](https://i.imgur.com/bC2O6Fw.png)
 
 ## Installation
 
