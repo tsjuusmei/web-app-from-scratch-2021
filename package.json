@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/tsjuusmei/web-app-from-scratch-2021#readme",
   "dependencies": {
-    "navigo": "^8.8.6",
-    "parcel": "^2.0.0-beta.2"
+    "navigo": "^8.8.6"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
