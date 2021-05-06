@@ -8,6 +8,7 @@
     "example": "examples"
   },
   "scripts": {
+    "start": "parcel build ./docs/index.html",
     "build": "parcel build ./docs/index.html",
     "dev": "parcel ./docs/index.html"
   },
