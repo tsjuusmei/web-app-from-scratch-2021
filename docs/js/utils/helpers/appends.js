@@ -27,8 +27,6 @@ function randomPhoto(photos) {
   return img
 }
 
-
-
 function appendTemp(avtemp) {
   h2.textContent = "Average temperature: " + avtemp + "°C"
 }
