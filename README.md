@@ -5,7 +5,7 @@ In this course I will learn to build a web application without frameworks or unn
 ## Concept
 
 I will create a dashboard in theme of *Mars* (the planet), where you can see the recent pictures of Mars sent by the Mars Rover. Also, the average temperature of Mars will be shown in the dashboard.
-In my project I will be working with a NASA API, specifically the *[Mars Rover Photos](https://api.nasa.gov/#b-a10)* API and also a *[Mars weather API](https://api.mars.spacexcompanion.app/public/)*.
+In my project I will be working with a NASA API, specifically the *[Mars Rover Photos](https://api.nasa.gov/#b-a10)* API and also a *[Self made API](https://wafs-be.herokuapp.com/temps)*.
 
 ## Actor & Interaction diagram
 
