@@ -1,11 +1,15 @@
-# Web App From Scratch @cmda-minor-web 2020 - 2021
+# Mars Rover Photo's
 
-In this course I will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of my choice, manipulated and finally shown in the UI of the App. I will be learning different ways to structure code and develop my own coding style. With the gained knowledge, I will be able to build interactive prototypes, based on real data. Also I will gain a better understanding of how API's, frameworks and libraries work.
+## Live Link
+
+Check out the project [here](https://wafs-guus.netlify.app/)
+
+![](https://i.imgur.com/SEr9vVd.jpg)
 
 ## Concept
 
-I will create a dashboard in theme of *Mars* (the planet), where you can see the recent pictures of Mars sent by the Mars Rover. Also, the average temperature of Mars will be shown in the dashboard.
-In my project I will be working with a NASA API, specifically the *[Mars Rover Photos](https://api.nasa.gov/#b-a10)* API and also a *[Self made API](https://wafs-be.herokuapp.com/temps)*.
+I will create a dashboard in theme of *Mars* (the planet), where you can see the recent pictures of Mars sent by the Mars Rover. Also, the average temperature of Mars will be shown in the dashboard. From the dashboard, you can navigate to a detailed page of that day at Mars, and see pictures of the same day.
+In my project I will be working with a NASA API, specifically the *[Mars Rover Photos](https://api.nasa.gov/#b-a10)* API and also a *[self made API](https://wafs-be.herokuapp.com/temps)* for the temperatures on Mars.
 
 ## Actor & Interaction diagram
 
@@ -16,27 +20,6 @@ In my project I will be working with a NASA API, specifically the *[Mars Rover P
 *Interaction diagram*
 
 ![Interaction Diagram](https://i.imgur.com/bC2O6Fw.png)
-
-## Installation
-
-1. Clone the repository:
-
-```
-  git clone https://github.com/tsjuusmei/web-app-from-scratch-2021.git
-```
-
-2. Install packages
-
-```
-  npm install 
-  // or yarn install
-```
-
-3. Run the app
-
-```
-  npm run dev
-```
 
 ## Datasets
 
@@ -104,6 +87,28 @@ The second dataset is a [self made API](https://wafs-be.herokuapp.com/temps) whi
     }
   }, ...
 ```
+
+## Installation
+
+1. Clone the repository:
+
+```
+  git clone https://github.com/tsjuusmei/web-app-from-scratch-2021.git
+```
+
+2. Install packages
+
+```
+  npm install 
+  // or yarn install
+```
+
+3. Run the app
+
+```
+  npm run dev
+```
+
 
 ## License
 
