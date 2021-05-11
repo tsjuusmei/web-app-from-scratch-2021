@@ -10,6 +10,7 @@ export const detailView = () => {
     const url = solUrl(sol)
     
     const solData = await fetchData(url)
+    console.log(solData)
     let earthDate = solData.photos[0].earth_date
 
     detailInfo(sol, earthDate)
