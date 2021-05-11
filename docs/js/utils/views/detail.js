@@ -8,6 +8,9 @@ export const detailView = () => {
     sol = sol.replace('http://localhost:1234/sol/', '')
 
     const url = solUrl(sol)
+
+    console.log(sol)
+    console.log(url)
     
     const solData = await fetchData(url)
     console.log(solData)
