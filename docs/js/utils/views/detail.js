@@ -5,15 +5,11 @@ import { solUrl } from '../helpers/endpoints'
 export const detailView = () => {
   return async () => {
     let sol = window.location.href
-    sol = sol.replace('http://localhost:1234/sol/', '')
+    sol = sol.replace('https://wafs-guus.netlify.app/sol/', '')
 
     const url = solUrl(sol)
-
-    console.log(sol)
-    console.log(url)
     
     const solData = await fetchData(url)
-    console.log(solData)
     let earthDate = solData.photos[0].earth_date
 
     detailInfo(sol, earthDate)
